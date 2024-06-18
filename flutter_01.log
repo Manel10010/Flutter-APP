@@ -1,0 +1,80 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+ShaderCompilerException: ShaderCompilerException: Shader compilation of "C:\flutter\packages\flutter\lib\src\material\shaders\ink_sparkle.frag" to "build\flutter_assets\shaders/ink_sparkle.frag" failed with exit code -1073740791.
+
+
+
+```
+#0      ShaderCompiler.compileShader (package:flutter_tools/src/build_system/targets/shader_compiler.dart:77:7)
+<asynchronous suspension>
+#1      writeBundle.<anonymous closure> (package:flutter_tools/src/bundle_builder.dart:184:25)
+<asynchronous suspension>
+#2      Future.wait.<anonymous closure> (dart:async/future.dart:522:21)
+<asynchronous suspension>
+#3      writeBundle (package:flutter_tools/src/bundle_builder.dart:162:3)
+<asynchronous suspension>
+#4      WebDevFS.update (package:flutter_tools/src/isolated/devfs_web.dart:843:9)
+<asynchronous suspension>
+#5      ResidentWebRunner._updateDevFS (package:flutter_tools/src/isolated/resident_web_runner.dart:488:35)
+<asynchronous suspension>
+#6      ResidentWebRunner.run.<anonymous closure> (package:flutter_tools/src/isolated/resident_web_runner.dart:283:41)
+<asynchronous suspension>
+#7      asyncGuard.<anonymous closure> (package:flutter_tools/src/base/async_guard.dart:111:24)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.3.1, on Microsoft Windows [versÆo 10.0.22000.1098], locale pt-BR)
+    • Flutter version 3.3.1 on channel stable at C:\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 4f9d92fbbd (6 weeks ago), 2022-09-06 17:54:53 -0700
+    • Engine revision 3efdf03e73
+    • Dart version 2.18.0
+    • DevTools version 2.15.0
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 33.0.0)
+    • Android SDK at C:\Users\wluca\AppData\Local\Android\sdk
+    • Platform android-33, build-tools 33.0.0
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version openjdk version "11.0.12" 2021-07-20
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop for Windows (Visual Studio Community 2022 17.3.3)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.3.32825.248
+    • Windows 10 SDK version 10.0.19041.0
+
+[✓] Android Studio (version 2021.2)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version openjdk version "11.0.12" 2021-07-20
+
+[✓] VS Code (version 1.72.2)
+    • VS Code at C:\Users\wluca\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.50.0
+
+[✓] Connected device (3 available)
+    • Windows (desktop) • windows • windows-x64    • Microsoft Windows [versÆo 10.0.22000.1098]
+    • Chrome (web)      • chrome  • web-javascript • Google Chrome 106.0.5249.119
+    • Edge (web)        • edge    • web-javascript • Microsoft Edge 106.0.1370.47
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+• No issues found!
+```
